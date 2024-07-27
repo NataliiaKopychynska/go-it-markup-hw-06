@@ -86,9 +86,11 @@ main {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #4d5ae5;
-  margin-right: 76px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* margin-right: 76px; */
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
+
+  padding: 16px 0;
 }
 
 .logo-accent {
@@ -102,7 +104,9 @@ main {
 }
 
 .navigation-list {
-  display: flex;
+  /* display: flex; */
+
+  display: none;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
@@ -161,8 +165,10 @@ main {
 }
 
 .addres-list {
-  display: flex;
-  gap: 40px;
+  /* display: flex; */
+
+  display: none;
+  /* gap: 40px; */
 }
 
 .addres-title {
@@ -170,7 +176,7 @@ main {
 
 .address-block {
   display: block;
-  padding: 24px 0;
+  /* padding: 24px 0; */
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
@@ -182,6 +188,116 @@ main {
 
 .address-block:hover,
 .address-block:focus {
+  color: #404bbf;
+}
+
+/* -------------------MOBILE MENU------------------ */
+
+.button-burger-menu {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.icon-burger {
+  fill: #2f2f37;
+}
+
+.mob-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 24px 24px 40px 16px;
+  background-color: #ffffff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* scrol */
+  overflow: auto;
+  /* ukrywa menu */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.clothe-btn-burger {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(46, 47, 66, 0.1);
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: 24px;
+
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-clothe-burger {
+  fill: #2e2f42;
+}
+
+.navigation-burger {
+}
+.navigation-list-burger {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  /* margin-bottom: 168px; */
+}
+.navigation-link-burger {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-decoration: none;
+}
+.navigation-link-hover-burger {
+  color: #404bbf;
+}
+
+.address-burger {
+}
+.addres-list-burger {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.addres-title-burger {
+}
+
+.address-block-burger {
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-block-burger:hover,
+.address-block-burger:focus {
   color: #404bbf;
 }
 
@@ -397,6 +513,12 @@ main {
   height: 40px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   gap: 16px;
+}
+
+.icon-media-list-burge {
+  gap: 40;
+  /* margin-bottom: 40px; */
+  justify-content: start;
 }
 
 .icon-media-link {
@@ -679,7 +801,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 10;
 
   /* display: flex;
   justify-content: center;
@@ -715,7 +837,7 @@ main {
   /* dlia moźliwośći skrolu modalnego okna */
   overflow-y: auto;
 
-  width: 408px;
+  width: 288px;
   min-height: 584px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -931,6 +1053,24 @@ main {
     max-width: 1166;
   }
 
+  /* --------------------HEADER ------------------ */
+
+  .button-burger-menu {
+    display: none;
+  }
+
+  .navigation-list {
+    display: flex;
+    margin-left: 120px;
+  }
+
+  .addres-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
   /* --------------------SECTION 1 ------------------ */
 
   .div-baner {
@@ -1046,9 +1186,21 @@ main {
   .p-footer-email {
     text-align: left;
   }
+  /* --------------------MODAL OVERLAY ------------------ */
+  .modal {
+    width: 408px;
+    overflow: auto;
+  }
 }
 
 @media screen and (min-width: 1158px) {
+  /* --------------------HEADER ------------------ */
+  .addres-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 24px 0;
+  }
   /* --------------------SECTION 1 ------------------ */
 
   .baner {

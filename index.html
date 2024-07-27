@@ -17,7 +17,7 @@
     />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="navigation">
           <a class="logo" href="./index.html"
@@ -51,8 +51,83 @@
             </li>
           </ul>
         </address>
+        <!-- button burger dla mobal-menu -->
+        <button class="button-burger-menu" type="button">
+          <svg class="icon-burger" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger1"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <!-- mobal menu  -->
+      <div class="mob-menu">
+        <div>
+          <button class="clothe-btn-burger" type="button">
+            <svg class="icon-clothe-burger" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <nav class="navigation-burger">
+            <ul class="navigation-list-burger">
+              <li>
+                <a
+                  href="./index.html"
+                  class="navigation-link-burger navigation-link-hover-burger"
+                  >Studio</a
+                >
+              </li>
+              <li><a href="" class="navigation-link-burger">Portfolio</a></li>
+              <li><a href="" class="navigation-link-burger">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <address class="address-burger">
+            <ul class="addres-list-burger">
+              <li class="addres-title-burger">
+                <a href="mailto:info@devstudio.com" class="address-block-burger"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="addres-title-burger">
+                <a href="tel:+110001111111" class="address-block-burger"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="icon-media-list icon-media-list-burge">
+            <li class="icon-media-item">
+              <a href="" class="icon-media-link">
+                <svg class="icon-media-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-media-item">
+              <a href="" class="icon-media-link">
+                <svg class="icon-media-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-media-item">
+              <a href="" class="icon-media-link">
+                <svg class="icon-media-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-media-item">
+              <a href="" class="icon-media-link">
+                <svg class="icon-media-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
     <main>
       <section class="baner">
@@ -377,7 +452,7 @@
                       ./images/cashless.jpg        1x,
                       ./images/cashless-2x-min.jpg 2x
                     "
-                    media="(min-width-1156px)"
+                    media="(min-width: 1156px)"
                   />
 
                   <source
@@ -385,7 +460,7 @@
                       ./images/cashless.jpg        1x,
                       ./images/cashless-2x-min.jpg 2x
                     "
-                    media="(min-width-756px)"
+                    media="(min-width: 756px)"
                   />
 
                   <source
@@ -393,7 +468,7 @@
                       ./images/cashless-phone-.jpg   1x,
                       ./images/cashless-phone-2x.jpg 2x
                     "
-                    media="(max-width-756px)"
+                    media="(max-width: 756px)"
                   />
                   <img
                     class="img-portfolio"
@@ -425,21 +500,21 @@
                       ./images/maditation.jpg        1x,
                       ./images/maditation-2x-min.jpg 2x
                     "
-                    media="(min-width-1156px)"
+                    media="(min-width: 1156px)"
                   />
                   <source
                     srcset="
                       ./images/maditation.jpg        1x,
                       ./images/maditation-2x-min.jpg 2x
                     "
-                    media="(min-width-756px)"
+                    media="(min-width: 756px)"
                   />
                   <source
                     srcset="
                       ./images/maditation-phone-.jpg   1x,
                       ./images/maditation-phone-2x.jpg 2x
                     "
-                    media="(max-width-756px)"
+                    media="(max-width: 756px)"
                   />
                   <img
                     class="img-portfolio"
@@ -666,7 +741,7 @@
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay is-open">
       <div class="modal">
         <button class="close-btn" type="button">
           <svg class="svg-button-close" width="8" height="8">
